@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Activity 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="Logo_last.png">
+  <style>
+     body {
+            margin: 0;
+         
+        }
+
+        /* Style for the header */
+        .header {
+            position: fixed; /* Fixes the header at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0);
+            padding-bottom: 10px;
+            background-color: white; /* Ensure the header background is solid */
+            z-index: 1000; /* Ensures the header stays above other content */
+        }
+    .activity {
+      width: 100%;
+      height: auto;
+      background-color: rgb(156, 225, 247);
+      display: flex;
+      justify-content: center;
+      padding-top: 25px;
+    }
+
+    .activity p {
+      font-size: 18px;
+    }
+
+    #img-area {
+      width: 40%;
+    }
+
+    #content-area {
+      width: 60%;
+    }
+
+    #heading {
+      font-family: Harrington;
+      font-size: 40px;
+      font-weight: bolder;
+    }
+
+    table,
+    th,
+    td {
+      border: 2px solid black;
+      padding: 12px;
+      font-size: 29px;
+    }
+
+    .sound-button {
+      cursor: pointer;
+      font-size: 24px;
+      border: none;
+      background: none;
+      /* color: blue; */
+      /* text-decoration: underline; */
+      margin-left: 5px;
+    }
+
+    .sound-button:hover {
+      text-decoration: none;
+    }
+    .backgroun{
+            background-image: url("border.png");
+            background-size: cover; /* Ensures the background image covers the section */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;
+
+        }
+  </style>
+</head>
+
+<body class="backgroun">
+  <audio id="sound-player" src=""></audio>
+  <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+    <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+    <span> <img src="header.png" width="30%" height="auto" class="img-responsive"></span>
+  </div>
+  <br>
+  <br>
+  <center>
+    <h1 id="heading" style="padding-top: 5%;">Sentences</h1> <br>
+  </center>
+  <div class="container text-center" style="font-size: 22px; padding-left: 15%;">
+    <p class="text-start">
+      <span style="color: rgb(154, 34, 240); font-weight: 600;"><u>Convention/Grammar</u></span><br><br> 
+      Every letter has its own special sound.<br>
+      We can use our mouth, lips, and tongue to make these sounds.<br><br>
+      When we put letter sounds together, we can make words!<br>
+    </p>
+    <div id="sound-icons" class="text-start d-flex">
+      <div class="a col-md-4">
+        <p class="sound-icon" data-letter="A">A <button class="sound-button" data-letter="A">🔉</button> apple</p>
+      <p class="sound-icon" data-letter="B">B <button class="sound-button" data-letter="B">🔉</button> ball</p>
+      <p class="sound-icon" data-letter="C">C <button class="sound-button" data-letter="C">🔉</button> cat</p>
+      <p class="sound-icon" data-letter="D">D <button class="sound-button" data-letter="D">🔉</button> dog</p>
+      <p class="sound-icon" data-letter="E">E <button class="sound-button" data-letter="E">🔉</button> egg</p>
+      <p class="sound-icon" data-letter="F">F <button class="sound-button" data-letter="F">🔉</button> fish</p>
+      <p class="sound-icon" data-letter="G">G <button class="sound-button" data-letter="G">🔉</button> goat</p>
+      <p class="sound-icon" data-letter="H">H <button class="sound-button" data-letter="H">🔉</button> hat</p>
+      <p class="sound-icon" data-letter="I">I <button class="sound-button" data-letter="I">🔉</button> igloo</p>
+      
+      </div>
+      
+      <div class="b col-lg-4">
+        <p class="sound-icon" data-letter="J">J <button class="sound-button" data-letter="J">🔉</button> jump</p>
+      <p class="sound-icon" data-letter="K">K <button class="sound-button" data-letter="K">🔉</button> king</p>
+      <p class="sound-icon" data-letter="L">L <button class="sound-button" data-letter="L">🔉</button> lion</p>
+      <p class="sound-icon" data-letter="M">M <button class="sound-button" data-letter="M">🔉</button> moon</p>
+        <p class="sound-icon" data-letter="N">N <button class="sound-button" data-letter="N">🔉</button> nest</p>
+      <p class="sound-icon" data-letter="O">O <button class="sound-button" data-letter="O">🔉</button> octopus</p>
+      <p class="sound-icon" data-letter="P">P <button class="sound-button" data-letter="P">🔉</button> pig</p>
+      <p class="sound-icon" data-letter="Q">Q <button class="sound-button" data-letter="Q">🔉</button> queen</p>
+      <p class="sound-icon" data-letter="R">R <button class="sound-button" data-letter="R">🔉</button> rabbit</p>
+      
+      </div>
+      <div class="c col-lg-4">
+        <p class="sound-icon" data-letter="S">S <button class="sound-button" data-letter="S">🔉</button> sun</p>
+      <p class="sound-icon" data-letter="T">T <button class="sound-button" data-letter="T">🔉</button> tree</p>
+      <p class="sound-icon" data-letter="U">U <button class="sound-button" data-letter="U">🔉</button> up</p>
+      <p class="sound-icon" data-letter="V">V <button class="sound-button" data-letter="V">🔉</button> van</p>
+      <p class="sound-icon" data-letter="W">W <button class="sound-button" data-letter="W">🔉</button> water</p>
+      <p class="sound-icon" data-letter="X">X <button class="sound-button" data-letter="X">🔉</button> x-mas</p>
+      <p class="sound-icon" data-letter="Y">Y <button class="sound-button" data-letter="Y">🔉</button> yellow</p>
+      <p class="sound-icon" data-letter="Z">Z <button class="sound-button" data-letter="Z">🔉</button> zebra</p>
+      </div>
+      <!-- Add more letters as needed -->
+    </div>
+    <br>
+    <a href="fun_time.html" class="btn btn-primary mb-5 btn-lg- text-center"
+      style="height: 50px; width: 200px; font-size: 22px;">Word Meanings</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('sounds.json')
+        .then(response => response.json())
+        .then(data => {
+          const soundPlayer = document.getElementById('sound-player');
+          const soundButtons = document.querySelectorAll('.sound-button');
+
+          soundButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const letter = this.getAttribute('data-letter');
+              const soundUrl = data[letter];
+              if (soundUrl) {
+                soundPlayer.src = soundUrl;
+                soundPlayer.play();
+              }
+            });
+          });
+        })
+        .catch(error => console.error('Error loading sounds.json:', error));
+    });
+  </script>
+</body>
+</html>
